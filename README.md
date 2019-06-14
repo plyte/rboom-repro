@@ -1,7 +1,7 @@
 # rboom-repro
 A repro to recreate an issue with the rboom install from install.packages("Boom")
 
-I've encountered an issue installign the "Boom" package from cran using the install.packages("Boom") command in the R shell.
+I've encountered an issue installing the "Boom" package from cran using the install.packages("Boom") command in the R shell.
 
 The error is as follows: 
 
