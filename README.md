@@ -62,11 +62,16 @@ make: *** Waiting for unfinished jobs....
 I've had this same issue on debian, ubuntu, and centos os base images with an R environment containing R 3.5.1. I've also tried 3.6 as well. 
 
 Install docker: 
+
 Windows: https://docs.docker.com/docker-for-windows/install/ (windows 10 pro required)
+
 Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+
 Then run:
+
 docker pull r-base:3.5.1 // this is the official base image by rocker that should be a solid base to test off of
+
 docker run -it r-base
 
 ```
