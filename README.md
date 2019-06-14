@@ -5,6 +5,7 @@ I've encountered an issue installing the "Boom" package from cran using the inst
 
 The error is as follows: 
 
+```
 > install.packages("Boom")
 Installing package into ‘/usr/local/lib/R/site-library’
 (as ‘lib’ is unspecified)
@@ -55,6 +56,7 @@ g++: fatal error: Killed signal terminated program cc1plus
 compilation terminated.
 make: *** [/usr/lib/R/etc/Makeconf:168: create_mixture_component.o] Error 1
 make: *** Waiting for unfinished jobs....
+```
 
 ## Recreate the message:
 I've had this same issue on debian, ubuntu, and centos os base images with an R environment containing R 3.5.1. I've also tried 3.6 as well. 
