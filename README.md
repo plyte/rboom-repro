@@ -50,8 +50,10 @@ g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I. -I../inst/include -IBmath
 g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I. -I../inst/include -IBmath -Imath/cephes -DADD_ -DR_NO_REMAP -DBOOST_NO_AUTO_PTR -DEIGEN_WARNINGS_DISABLED -I"/usr/local/lib/R/site-library/BH/include"    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-qEYH9x/r-base-3.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -c Models/Bart/PoissonBartModel.cpp -o Models/Bart/PoissonBartModel.o
 g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I. -I../inst/include -IBmath -Imath/cephes -DADD_ -DR_NO_REMAP -DBOOST_NO_AUTO_PTR -DEIGEN_WARNINGS_DISABLED -I"/usr/local/lib/R/site-library/BH/include"    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-qEYH9x/r-base-3.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -c Models/Bart/GaussianLinearBartModel.cpp -o Models/Bart/GaussianLinearBartModel.o
 g++ -std=gnu++11 -I"/usr/share/R/include" -DNDEBUG -I. -I../inst/include -IBmath -Imath/cephes -DADD_ -DR_NO_REMAP -DBOOST_NO_AUTO_PTR -DEIGEN_WARNINGS_DISABLED -I"/usr/local/lib/R/site-library/BH/include"    -fpic  -g -O2 -fdebug-prefix-map=/build/r-base-qEYH9x/r-base-3.5.1=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -c Models/Bart/Bart.cpp -o Models/Bart/Bart.o
+```
 
 This is where it hangs for about 20 minutes then outputs this message: 
+```
 g++: fatal error: Killed signal terminated program cc1plus
 compilation terminated.
 make: *** [/usr/lib/R/etc/Makeconf:168: create_mixture_component.o] Error 1
