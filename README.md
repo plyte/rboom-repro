@@ -97,3 +97,8 @@ Type 'q()' to quit R.
 
 > install.packages("Boom")
 ```
+
+## Possible reason:
+Found a forum post about a similar issue that looks to have the same error message: https://community.rstudio.com/t/development-version-of-readr-failing-to-compile/17456/13
+
+It looks like this might be a caching issue?
