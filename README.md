@@ -206,3 +206,17 @@ make: *** [math/cephes/rgamma.o] Interrupt
 ERROR: compilation failed for package ‘Boom’
 * removing ‘/usr/local/lib/R/site-library/Boom’
 ```
+
+# Update 6/19
+I was able to get the package built using a source built version of R. 
+
+The make command was as follows: 
+```
+g++ -std=gnu++11 -I"/usr/local/lib64/R/include" -DNDEBUG -I. -I../inst/include -IBmath -Imath/cephes  -I"/usr/local/lib64/R/library/BH/include" -I"/usr/local/lib64/R/library/RcppEigen/include" -I/usr/local/include   -fpic  -g -O2
+```
+
+During this I received a lot of notes detailing that the specific header used is deprecated:
+```
+/usr/local/lib64/R/library/BH/include/boost/pending/integer_log2.hpp:7:89: note: #pragma message: This header is deprecated. Use <boost/integer/integer_log2.hpp> instead.
+BOOST_HEADER_DEPRECATED("<boost/integer/integer_log2.hpp>");
+```
