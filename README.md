@@ -168,9 +168,10 @@ ERROR: compilation failed for package ‘Boom’
 Updated the CXX11STD flag to -std=c++11 and the CXX11FLAGS to the one used in the original make file for Boom. I was able to get further than before, but the program hangs after spewing a vast number of "warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type <aka __vector(2) double}' [-Wignored-attributes]" on various parts of the ../inst/include/Eigen/src/Core/...
   
   I'm also getting some "../inst/include/LinAlg/EigenMap.http:31:60: required from here" messages
-  
-  Once interupted these are the packages yet left to be built: 
-  /usr/local/lib/R/etc/Makeconf:176: recipe for target 'Models/Glm/PosteriorSamplers/BinomialLogitSpikeSlabSampler.o' failed
+
+Once interupted these are the packages yet left to be built: 
+```
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'Models/Glm/PosteriorSamplers/BinomialLogitSpikeSlabSampler.o' failed
 make: *** [Models/Glm/PosteriorSamplers/BinomialLogitSpikeSlabSampler.o] Interrupt
 /usr/local/lib/R/etc/Makeconf:176: recipe for target 'Models/HMM/HMM2.o' failed
 make: *** [Models/HMM/HMM2.o] Interrupt
@@ -204,4 +205,4 @@ make: *** [math/cephes/sici.o] Interrupt
 make: *** [math/cephes/rgamma.o] Interrupt
 ERROR: compilation failed for package ‘Boom’
 * removing ‘/usr/local/lib/R/site-library/Boom’
-
+```
