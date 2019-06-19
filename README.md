@@ -163,3 +163,45 @@ make: *** Waiting for unfinished jobs....
 ERROR: compilation failed for package ‘Boom’
 * removing ‘/Boom.Rcheck/Boom’
 ```
+
+# Update 6/18/19
+Updated the CXX11STD flag to -std=c++11 and the CXX11FLAGS to the one used in the original make file for Boom. I was able to get further than before, but the program hangs after spewing a vast number of "warning: ignoring attributes on template argument 'Eigen::internal::packet_traits<double>::type <aka __vector(2) double}' [-Wignored-attributes]" on various parts of the ../inst/include/Eigen/src/Core/...
+  
+  I'm also getting some "../inst/include/LinAlg/EigenMap.http:31:60: required from here" messages
+  
+  Once interupted these are the packages yet left to be built: 
+  /usr/local/lib/R/etc/Makeconf:176: recipe for target 'Models/Glm/PosteriorSamplers/BinomialLogitSpikeSlabSampler.o' failed
+make: *** [Models/Glm/PosteriorSamplers/BinomialLogitSpikeSlabSampler.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'Models/HMM/HMM2.o' failed
+make: *** [Models/HMM/HMM2.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/QR.o' failed
+make: *** [LinAlg/QR.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/Cholesky.o' failed
+make: *** [LinAlg/Cholesky.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/SVD.o' failed
+make: *** [LinAlg/SVD.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/VectorView.o' failed
+make: *** [LinAlg/VectorView.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/LU.o' failed
+make: *** [LinAlg/LU.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/Matrix.o' failed
+make: *** [LinAlg/Matrix.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/Selector.o' failed
+make: *** [LinAlg/Selector.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/Eigen.o' failed
+make: *** [LinAlg/Eigen.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/Vector.o' failed
+make: *** [LinAlg/Vector.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'LinAlg/SpdMatrix.o' failed
+make: *** [LinAlg/SpdMatrix.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'math/cephes/spence.o' failed
+make: *** [math/cephes/spence.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'math/cephes/ei.o' failed
+make: *** [math/cephes/ei.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'math/cephes/sici.o' failed
+make: *** [math/cephes/sici.o] Interrupt
+/usr/local/lib/R/etc/Makeconf:176: recipe for target 'math/cephes/rgamma.o' failed
+make: *** [math/cephes/rgamma.o] Interrupt
+ERROR: compilation failed for package ‘Boom’
+* removing ‘/usr/local/lib/R/site-library/Boom’
+
